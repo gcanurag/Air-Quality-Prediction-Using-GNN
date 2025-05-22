@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import torch
+import numpy as np
 import io
 import pickle
 from torch_geometric.data import Data
@@ -71,14 +72,6 @@ edge_memory = checkpoint["edge_memory"].to(device)
 
 
 
-
-
-
-
-
-
-
-
 # Define a Pydantic model for input validation
 class InferenceInput(BaseModel):
     x: list  # Node features
@@ -129,6 +122,7 @@ def perform_prediction(x, edge_index, edge_attr):
 
         # Inverse transform the predictions to original scale
         y_pred = x_scaler.inverse_transform(y_pred.cpu().numpy())
+        y_pred = np.abs(y_pred)
 
         print("prediction made")
         return  y_pred.tolist()
