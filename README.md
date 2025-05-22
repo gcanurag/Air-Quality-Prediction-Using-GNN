@@ -7,7 +7,7 @@ This project is a **Spatio-Temporal Graph Neural Network (GNN)** based system de
 
 - **Backend**: FastAPI, PyTorch, PyTorch Geometric, Scikit-learn
 - **Model**: Graph Attention Network (GAT) with temporal edge memory
-- **Frontend**: Vite + React (assumed)
+- **Frontend**: Vite (React.js)
 - **Data Handling**: Pandas, NumPy, CSV upload support
 - **Deployment**: Uvicorn
 
