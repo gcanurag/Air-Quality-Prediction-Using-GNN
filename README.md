@@ -122,9 +122,6 @@ pm2_5,pm10,wind_speed,wind_direction,latitude,longitude,altitude
 
 Feel free to fork the repo, open issues, or submit pull requests.
 
-## 📜 License
-
-This project is licensed under the MIT License.
 
 ## 🙋‍♂️ Author
 
